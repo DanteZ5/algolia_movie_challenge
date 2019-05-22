@@ -1,4 +1,21 @@
 // Specific CSS for your home-page
 #root {
+  max-width: 800px;
+  margin: auto;
+  h1 {
+    text-align: center;
+  }
+}
 
+.search-bar {
+  margin: 20px;
+}
+
+.movie-list {
+  margin: 20px;
+  li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
 }
