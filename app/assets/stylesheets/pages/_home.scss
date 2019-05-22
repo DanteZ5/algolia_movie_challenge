@@ -1,21 +1,33 @@
 // Specific CSS for your home-page
+// #root {
+//   max-width: 800px;
+//   margin: auto;
+//   h1 {
+//     text-align: center;
+//   }
+// }
+
 #root {
-  max-width: 800px;
-  margin: auto;
   h1 {
-    text-align: center;
+    margin-top: 40px;
   }
 }
-
 .search-bar {
   margin: 20px;
 }
 
-.movie-list {
-  margin: 20px;
-  li {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-  }
+.movie-title {
+  font-size: 14px;
 }
+.movie-delete {
+  color: $gray;
+  font-size: 12px;
+}
+// .movie-list {
+//   margin: 20px;
+//   li {
+//     list-style-type: none;
+//     display: flex;
+//     justify-content: space-between;
+//   }
+// }
