@@ -53,7 +53,7 @@ class App extends Component {
           console.log("error", response.message)
         } else {
           this.setState({ movies: response });
-          console.log("it worked!", response);
+          console.log(`${response[0].title} added to db with success`, response);
         }
       }
     });
@@ -61,6 +61,7 @@ class App extends Component {
 
 
   toggleNewMovie = () => {
+
     this.setState({
       isEmptyState: !this.state.isEmptyState
     })
