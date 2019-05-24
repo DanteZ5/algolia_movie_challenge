@@ -1,1 +1,1 @@
-Algolia Movie Challenge
+Algolia Movie Challenge by Dante
