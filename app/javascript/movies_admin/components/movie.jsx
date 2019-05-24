@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
 
 class Movie extends Component {
-  // handleClick = () => {
-  //   if (this.props.selectGif) {
-  //     this.props.selectGif(this.props.id);
-  //   }
-  // }
+
+
+  handleDelete = () => {
+    if (this.props.movieDelete) {
+      this.props.movieDelete(this.props.movie.objectID);
+    }
+  }
+
+
 
   render() {
     // const src = `https://media2.giphy.com/media/${this.props.id}/200.gif`;
     return (
       <li className="list-inline-item">
-      <img src={this.props.movie.image} className="img"/>
+      <div className="movie-cover">
+        <img src={this.props.movie.image} className="img"/>
+        <div className="movie-rating"><h5>{this.props.movie.rating}</h5></div>
+      </div>
       <p className="movie-title">{this.props.movie.title.substring(0, 20)}</p>
-      <p className="movie-delete">delete</p>
+      <button onClick={this.handleDelete} className="movie-delete">delete</button>
       </li>
     );
   }

@@ -18,6 +18,28 @@ class App extends Component {
     };
   }
 
+  movieDelete = (movieID) => {
+      $.ajax({
+        url: `/api/v1/movies/${movieID}`,
+        type: 'DELETE',
+        success:() => {
+          this.removeMovie(movieID);
+          console.log(`movie #${movieID} removed from db`)
+        }
+    });
+    // this.props.handleDelete(id);
+  }
+
+  removeMovie(id) {
+    var newMovies = this.state.movies.filter((movie) => {
+        return movie.objectID != id;
+    });
+
+    this.setState({ movies: newMovies });
+  }
+
+
+
   search = (query) => {
     index.search(event.target.value, { hitsPerPage: 24, page: 0 })
       .then((content) => {
@@ -36,7 +58,7 @@ class App extends Component {
       <div className="container text-center">
       <h1>Hello Movie</h1>
       <SearchBar algoliaSearchFunction={this.search}/>
-      <MovieList movies={this.state.movies} />
+      <MovieList movies={this.state.movies} movieDelete={this.movieDelete} />
       </div>
     );
   }

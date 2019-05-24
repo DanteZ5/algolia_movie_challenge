@@ -1,19 +1,10 @@
-// Specific CSS for your home-page
-// #root {
-//   max-width: 800px;
-//   margin: auto;
-//   h1 {
-//     text-align: center;
-//   }
-// }
-
 #root {
   h1 {
     margin-top: 40px;
   }
 }
 .search-bar {
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
 .movie-title {
@@ -23,11 +14,27 @@
   color: $gray;
   font-size: 12px;
 }
-// .movie-list {
-//   margin: 20px;
-//   li {
-//     list-style-type: none;
-//     display: flex;
-//     justify-content: space-between;
-//   }
-// }
+
+.movie-cover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 230px;
+  width: 150px;
+  padding: 5px;
+}
+
+.movie-cover > img {
+  height: 220px;
+  width: 140px;
+  object-fit: cover;
+}
+
+.movie-cover > .movie-rating {
+  position: relative;
+  bottom: 208px;
+  left: 96px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: gold;
+  color: black;
+}
