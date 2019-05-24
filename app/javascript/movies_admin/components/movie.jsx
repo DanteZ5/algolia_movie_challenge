@@ -20,7 +20,13 @@ class Movie extends Component {
         <div className="movie-rating"><h5>{this.props.movie.rating}</h5></div>
       </div>
       <p className="movie-title">{this.props.movie.title.substring(0, 20)}</p>
-      <button onClick={this.handleDelete} className="movie-delete">delete</button>
+      <button className="delete-button" onClick={this.handleDelete}>
+        <i className="fa fa-trash-alt"></i>
+      </button>
+      <div>
+
+
+      </div>
       </li>
     );
   }

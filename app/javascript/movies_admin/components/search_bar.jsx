@@ -12,6 +12,7 @@ class SearchBar extends Component {
         <input
           type="text"
           className="form-control form-search search-bar"
+          placeholder='find a specific movie'
           onChange={this.handleUpdate}
         />
       </div>

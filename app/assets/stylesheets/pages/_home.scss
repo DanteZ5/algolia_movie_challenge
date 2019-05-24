@@ -1,40 +1,95 @@
 #root {
-  h1 {
-    margin-top: 40px;
+  padding: 40px;
+  // background-color: #FAFCFF;
+
+  // BUTTONS
+  button {
+    border-radius: 10px;
+    color: black;
   }
-}
-.search-bar {
-  margin-bottom: 20px;
+  button:hover {
+    color: white;
+    background-color: black;
+  }
+  .add-back-button {
+    margin: 10px;
+    padding: 10px 15px;
+  }
+  .delete-button {
+    border: none;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    position: relative;
+    bottom: 85px;
+    left: -46px;
+  }
+
+  // SEARCH BAR
+  .search-bar {
+    margin: 20px 0;
+  }
+
+
+  // INDEX
+  .movie-title {
+    font-size: 14px;
+  }
+  .movie-delete {
+    color: $gray;
+    font-size: 12px;
+  }
+
+  .movie-cover {
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    height: 230px;
+    width: 150px;
+    padding: 5px;
+  }
+
+  .movie-cover > img {
+    height: 220px;
+    width: 140px;
+    object-fit: cover;
+  }
+
+  .movie-cover > .movie-rating {
+    position: relative;
+    bottom: 208px;
+    left: 96px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: gold;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  // FORM
+  .form-container {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+  }
+
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin: auto;
+  }
+  select {
+    background-color: white;
+    width: 173px;
+    height: 30px;
+  }
+
 }
 
-.movie-title {
-  font-size: 14px;
-}
-.movie-delete {
-  color: $gray;
-  font-size: 12px;
-}
 
-.movie-cover {
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  height: 230px;
-  width: 150px;
-  padding: 5px;
-}
 
-.movie-cover > img {
-  height: 220px;
-  width: 140px;
-  object-fit: cover;
-}
 
-.movie-cover > .movie-rating {
-  position: relative;
-  bottom: 208px;
-  left: 96px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: gold;
-  color: black;
-}

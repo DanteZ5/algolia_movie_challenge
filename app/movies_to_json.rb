@@ -1,6 +1,5 @@
-module ApplicationHelper
-
-  def movie_to_json(movies)
+module MoviesToJson
+  def movies_to_json(movies)
     movies = movies.sample(24).to_json
     array = JSON.parse(movies)
     keepers = ["id", "title", "image", "rating"]
@@ -10,5 +9,4 @@ module ApplicationHelper
     end
     return array.to_json
   end
-
 end
